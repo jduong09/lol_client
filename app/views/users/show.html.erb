@@ -24,15 +24,15 @@
   </header>
   <main>
     <section class="main-content">
-      <ul>
-        <li>Overview</li>
-        <li>Worlds</li>
-        <li>Patch Notes</li>
-      </ul>
-      <section>
-        Hello these are the patch notes.
-      </section>
-
+      <%= turbo_frame_tag "main" do %>
+        <ul class="main-content-nav">
+          <li><%= link_to 'Overview', user_overview_path(@user) %></li>
+          <li>Home</li>
+        </ul>
+        <section>
+          Hello these are the patch notes.
+        </section>
+      <% end %>
     </section>
     <section class="friends">
       <ul class="friends-list">

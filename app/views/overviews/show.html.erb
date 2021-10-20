@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "main" do %>
+  <section>
+  <ul class="main-content-nav">
+    <li>Overview</li>
+    <li><%= link_to 'Home', user_path(@user) %></li>
+  </ul>
+  <%= @user %>
+  </section>
+<% end %>

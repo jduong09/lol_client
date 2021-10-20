@@ -39,13 +39,6 @@ main {
   background-color: powderblue;
 }
 
-.main-content > ul {
-  display: flex;
-}
-
-.main-content li {
-  padding: 3px;
-}
 
 .main-content li:hover {
   color: white;
@@ -76,5 +69,17 @@ main {
   border: 1px solid gold;
   background-color: darkblue;
   color: white;
+}
+
+#main {
+  border: 1px solid green;
+}
+
+.main-content-nav {
+  display: flex;
+}
+
+.main-content-nav > li {
+  padding: 3px;
 }
 

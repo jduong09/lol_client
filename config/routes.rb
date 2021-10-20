@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root "sessions#new"
 
-  resources :users, only: [:new, :create, :show]
+  #sign up & show
+  resources :users, only: [:new, :create, :show] do 
+    resource :overview, only: [:show]
+  end
 
   #sign in & sign out
   resource :sessions, only: [:new, :create, :destroy]
