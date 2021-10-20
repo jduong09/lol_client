@@ -1,0 +1,80 @@
+.user-show {
+  height: 100%;
+}
+
+header {
+  border-bottom: 1px solid black;
+  background-color: purple;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left-side, .nav-right-side {
+  display: flex;
+}
+
+.nav-left-side > ul {
+  display: flex;
+}
+
+nav li {
+  padding: 12px;
+}
+
+#play-btn {
+  padding: 10px;
+  display: flex;
+}
+
+main {
+  display: flex;
+  height: 100%;
+}
+
+.main-content {
+  width: 90%;
+  background-color: powderblue;
+}
+
+.main-content > ul {
+  display: flex;
+}
+
+.main-content li {
+  padding: 3px;
+}
+
+.main-content li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.friends {
+  width: 10%;
+  background-color: palevioletred;
+  position: relative;
+}
+
+.friends-list {
+  padding: 10px;
+}
+
+.friends-list > li {
+  padding: 4px;
+}
+
+.friends-extra {
+  bottom: 45px;
+  position: absolute;
+  display: flex;
+}
+
+.friends-extra > li {
+  border: 1px solid gold;
+  background-color: darkblue;
+  color: white;
+}
+

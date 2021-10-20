@@ -1,0 +1,52 @@
+<div class="user-show">
+  <header>
+    <nav>
+      <div class="nav-left-side">
+      <div id="play-btn">
+        <div>Logo</div>
+        <div id="pentagon">Play</div>
+      </div>
+        <ul>
+          <li>Home</li>
+          <li>TFT</li>
+          <li>Clash</li>
+        </ul>
+      </div>
+
+      <ul class="nav-right-side">
+        <li>Profile</li>
+        <li>Collection</li>
+        <li>Loot</li>
+        <li>Currency</li>
+        <li>Profile</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="main-content">
+      <ul>
+        <li>Overview</li>
+        <li>Worlds</li>
+        <li>Patch Notes</li>
+      </ul>
+      <section>
+        Hello these are the patch notes.
+      </section>
+
+    </section>
+    <section class="friends">
+      <ul class="friends-list">
+      <% @friends.each do |friend| %> 
+        <li><%= friend.username %></li>
+      <% end %>
+      </ul>
+
+      <ul class="friends-extra">
+        <li>Chat
+          <div class="chatbox"></div>
+        </li>
+        <li>Missions</li>
+      </ul>
+    </section>
+  </main>
+</div>

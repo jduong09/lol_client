@@ -1,0 +1,43 @@
+.sign-up {
+  display: flex;
+  min-height: 100%;
+}
+
+.sign-in-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  min-height: 100%;
+}
+
+.sign-in-info > h1 {
+  font-family: 'Friz Quadrata Regular OS', 'Gill Sans';
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 32px;
+  margin-right: 80px;
+}
+
+.sign-in-form > input {
+  display: block;
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Friz Quadrata Regular OS', 'Gill Sans';
+}
+
+.sign-in-photo {
+  width: 60%;
+  min-height: 100%;
+}
+
+.submit-btn:hover {
+  background-color: orange;
+  border-color: orange;
+  color: white;
+}

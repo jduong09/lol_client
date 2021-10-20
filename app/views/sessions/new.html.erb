@@ -1,0 +1,16 @@
+<div class="sign-up">
+  <section class="sign-in-info">
+    <h1 class="title">Sign In</h1>
+    <form class="sign-in-form" action="<%= sessions_url %>" method="POST">
+      <input type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+      <input type="text" id="username" name="user[username]" placeholder="Username">
+
+      <input type="text" id="password" name="user[password]" placeholder="Password">
+
+      <input class="submit-btn" type="submit" value="Sign in">
+    </form>
+  </section>
+  <%= image_tag("fiora_wallpaper.jpeg", :alt => "fiora league of legends", class: "sign-in-photo") %>
+</div>
