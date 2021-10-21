@@ -29,8 +29,14 @@
           <li><%= link_to 'Overview', user_overview_path(@user) %></li>
           <li>Home</li>
         </ul>
-        <section>
-          Hello these are the patch notes.
+        <section class="overview">
+          <video controls>
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          <video controls>Hello video right here.</video>
+          <video controls>Hello video right here.</video>
+          <%= image_tag("fiora_wallpaper.jpeg", :alt => "fiora league of legends") %>
+          <%= image_tag("fiora_wallpaper.jpeg", :alt => "fiora league of legends") %>
         </section>
       <% end %>
     </section>

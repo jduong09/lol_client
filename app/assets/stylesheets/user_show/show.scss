@@ -5,6 +5,7 @@
 header {
   border-bottom: 1px solid black;
   background-color: purple;
+  height: 5%;
 }
 
 nav {
@@ -31,14 +32,19 @@ nav li {
 
 main {
   display: flex;
-  height: 100%;
+  height: 95%;
 }
 
 .main-content {
   width: 90%;
-  background-color: powderblue;
+  position: relative;
 }
 
+.overview {
+  height: 100%;
+  background-image: image-url('fiora_wallpaper.jpeg');
+  background-size: cover;
+}
 
 .main-content li:hover {
   color: white;
@@ -71,15 +77,29 @@ main {
   color: white;
 }
 
-#main {
-  border: 1px solid green;
-}
-
 .main-content-nav {
   display: flex;
+  position: absolute;
+  top: 45px;
+  left: 100px;
 }
 
 .main-content-nav > li {
   padding: 3px;
 }
 
+.overview {
+  display: flex;
+  align-items: flex-end;
+}
+
+.overview > video, .overview > img {
+  width: 20%;
+  height: 20%;
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.overview > img {
+  width: 15%;
+}
