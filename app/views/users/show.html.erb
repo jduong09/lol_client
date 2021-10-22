@@ -1,24 +1,53 @@
+<!-- # Need:
+#Header
+  #Onclick event that will highlight header nav items when they are active. (DONE)
+  #onload of show page, Home is active. (DONE)
+
+#Main-content
+  #Onclick event that highlights what's showing. Overview is showing first. (DONE)
+  #css animation. strike underline! (DONE)
+
+  #Home
+    # Get info from League API. Most played champs?
+    # win rate?
+  #Overview
+    # Background-image: preseason
+    # video: preseason video
+    # image-thumbnail: /dev 
+    # image: ranking
+    # shop-skins: 2 skins
+  #Patch Notes
+    # Link/Preview of league's current patch notes
+#Chat-feature
+  # Highlight user that you are chatting with.
+  # Chat window
+#Missions Feature
+
+#Home page
+  #
+-->
+
 <div class="user-show">
   <header>
     <nav>
       <div class="nav-left-side">
-      <div id="play-btn">
-        <div>Logo</div>
-        <div id="pentagon">Play</div>
-      </div>
+        <div id="play-btn">
+          <div>Logo</div>
+          <div id="pentagon">Play</div>
+        </div>
         <ul>
-          <li>Home</li>
-          <li>TFT</li>
-          <li>Clash</li>
+          <li><a class="header-nav-active">Home</a></li>
+          <li><a>TFT</a></li>
+          <li><a>Clash</a></li>
         </ul>
       </div>
 
       <ul class="nav-right-side">
-        <li>Profile</li>
-        <li>Collection</li>
-        <li>Loot</li>
-        <li>Currency</li>
-        <li>Profile</li>
+        <li><a>Profile</a></li>
+        <li><a>Collection</a></li>
+        <li><a>Loot</a></li>
+        <li><a>Currency</a></li>
+        <li><a>Profile</a></li>
       </ul>
     </nav>
   </header>
@@ -26,33 +55,37 @@
     <section class="main-content">
       <%= turbo_frame_tag "main" do %>
         <ul class="main-content-nav">
+          <li class="main-content-active">Home</li>
           <li><%= link_to 'Overview', user_overview_path(@user) %></li>
-          <li>Home</li>
+          <li><a>Patch Notes</a></li>
         </ul>
-        <section class="overview">
-          <video controls>
-            Sorry, your browser doesn't support embedded videos.
-          </video>
-          <video controls>Hello video right here.</video>
-          <video controls>Hello video right here.</video>
-          <%= image_tag("fiora_wallpaper.jpeg", :alt => "fiora league of legends") %>
-          <%= image_tag("fiora_wallpaper.jpeg", :alt => "fiora league of legends") %>
-        </section>
+        <%= render "users/home" %>
       <% end %>
     </section>
     <section class="friends">
       <ul class="friends-list">
       <% @friends.each do |friend| %> 
-        <li><%= friend.username %></li>
+        <li><a><%= friend.username.capitalize() %></a></li>
       <% end %>
       </ul>
 
       <ul class="friends-extra">
         <li>Chat
-          <div class="chatbox"></div>
         </li>
         <li>Missions</li>
       </ul>
+      <aside>
+        <ul><li>Das Kartoffel</li></ul>
+        <section>
+          <h2>Das Kartoffel</h2>
+          <section class="chatbox">
+            Tryna run one?
+          </section>
+          <section class="new-message">
+            Setting up
+          </section> 
+        </section>
+      </aside>
     </section>
   </main>
 </div>

@@ -1,0 +1,80 @@
+.friends {
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0.897);
+  position: relative;
+  color: goldenrod;
+  border-left: 1px solid rgba(0, 0, 0, 0.897);
+}
+
+.friends-list > li a {
+  display: block;
+  padding: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.friends-list > li a:hover {
+  background-color: goldenrod;
+  color: black;
+}
+
+.friends-extra {
+  bottom: 45px;
+  position: absolute;
+  display: flex;
+}
+
+.friends-extra > li {
+  border: 1px solid goldenrod;
+  background-color: rgba(0, 0, 0, 0.897);
+  color: white;
+}
+
+.friends > aside {
+  background-color: rgba(0, 0, 0, 0.897);
+  position: absolute;
+  width: 200%;
+  height: 40%;
+  bottom: 0;
+  right: 100%;
+  margin-right: 1px;
+  display: flex;
+  border-left: 1px solid goldenrod;
+  border-top: 1px solid goldenrod;
+}
+
+aside > ul {
+  width: 20%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.897);
+  align-self: flex-end;
+  border-top: 1px solid goldenrod;
+}
+
+aside > section {
+  width: 80%;
+  border-left: 1px solid goldenrod;
+}
+
+aside > ul li {
+  font: 12px;
+  text-align: center;
+}
+
+aside h2 {
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.897);
+  height: 10%;
+}
+
+aside .chatbox {
+  border-top: 1px solid goldenrod;
+  border-bottom: 1px solid goldenrod;
+  background-color: white;
+  height: 80%;
+}
+
+aside .new-message {
+  height: 10%;
+  background-color: white;
+}

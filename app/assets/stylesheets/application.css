@@ -11,10 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require_tree .
  */
 
- @import "./reset.scss";
- @import "./sign_in/form.scss";
- @import "./base.scss";
- @import "./user_show/show.scss"
  

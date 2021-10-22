@@ -4,8 +4,9 @@
 
 header {
   border-bottom: 1px solid black;
-  background-color: purple;
+  background-color: rgba(0, 0, 0, 0.897);
   height: 5%;
+  color: goldenrod;
 }
 
 nav {
@@ -23,6 +24,39 @@ nav {
 
 nav li {
   padding: 12px;
+  position: relative;
+}
+
+nav li:hover {
+  cursor: pointer;
+}
+
+.header-nav-active::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid goldenrod;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.header-nav-active::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 7px solid rgba(0, 0, 0, 0.897);
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #play-btn {
@@ -37,55 +71,64 @@ main {
 
 .main-content {
   width: 90%;
-  position: relative;
+  //background-color: rgba(0, 0, 0, 0.897);
+  background-color: black;
 }
+
 
 .overview {
   height: 100%;
-  background-image: image-url('fiora_wallpaper.jpeg');
-  background-size: cover;
-}
-
-.main-content li:hover {
-  color: white;
-  cursor: pointer;
-}
-
-.friends {
-  width: 10%;
-  background-color: palevioletred;
-  position: relative;
-}
-
-.friends-list {
-  padding: 10px;
-}
-
-.friends-list > li {
-  padding: 4px;
-}
-
-.friends-extra {
-  bottom: 45px;
-  position: absolute;
-  display: flex;
-}
-
-.friends-extra > li {
-  border: 1px solid gold;
-  background-color: darkblue;
-  color: white;
+  /*
+  background-image: image-url('league_of_legends_preseason_2022.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  */
 }
 
 .main-content-nav {
   display: flex;
-  position: absolute;
-  top: 45px;
-  left: 100px;
+  justify-content: flex-start;
+  position: relative;
+  padding: 10px;
+  width: 30%;
 }
 
 .main-content-nav > li {
   padding: 3px;
+  color: goldenrod;
+}
+
+.main-content-nav > li a {
+  position: relative;
+}
+
+.main-content-nav > li a::after {
+  content: '.';
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  color: transparent;
+  background: goldenrod;
+  height: 1px;
+}
+
+.main-content-active {
+  border-bottom: 1px solid goldenrod;
+}
+
+.main-content-nav > li a:hover::after {
+  animation-duration: 1s;
+  animation-name: strike;
+  animation-iteration-count: infinite;
+}
+
+@keyframes strike {
+  to {
+    width: 100%;
+  }
 }
 
 .overview {
@@ -98,6 +141,10 @@ main {
   height: 20%;
   margin-bottom: 30px;
   border: 1px solid black;
+}
+
+.overview > video:hover, .overview > img:hover {
+  cursor: pointer;
 }
 
 .overview > img {

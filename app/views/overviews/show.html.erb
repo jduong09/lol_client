@@ -1,8 +1,16 @@
 <%= turbo_frame_tag "main" do %>
-  <section>
-    <ul class="main-content-nav">
-      <li>Overview</li>
-      <li><%= link_to 'Home', user_path(@user) %></li>
-    </ul>
-  </section>
+  <ul class="main-content-nav">
+    <li><%= link_to 'Home', user_path(@user) %></li>
+    <li class="main-content-active">Overview</li>
+    <li><a>Patch Notes</a></li>
+  </ul>
+  <section class="overview">
+      <video controls>
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <video controls>Hello video right here.</video>
+      <video controls>Hello video right here.</video>
+      <%= image_tag("fiora_wallpaper.jpeg", :alt => "fiora league of legends") %>
+      <%= image_tag("fiora_wallpaper.jpeg", :alt => "fiora league of legends") %>
+    </section>
 <% end %>
