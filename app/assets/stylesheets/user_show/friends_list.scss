@@ -13,11 +13,12 @@
   text-align: center;
 }
 
-.friends-list > li a:hover {
+.friends-list > li a:hover, .highlight {
   background-color: goldenrod;
   color: black;
 }
 
+/* Bottom of page, chat and missions */
 .friends-extra {
   bottom: 45px;
   position: absolute;
@@ -41,6 +42,7 @@
   display: flex;
   border-left: 1px solid goldenrod;
   border-top: 1px solid goldenrod;
+  border-right: 1px solid goldenrod;
 }
 
 aside > ul {
@@ -77,4 +79,12 @@ aside .chatbox {
 aside .new-message {
   height: 10%;
   background-color: white;
+}
+
+.minimize {
+  z-index: -1;
+}
+
+.maximize {
+  z-index: 2;
 }
