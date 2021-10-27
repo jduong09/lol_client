@@ -20,14 +20,13 @@
     # Link/Preview of league's current patch notes
 #Chat-feature
   # Highlight user that you are chatting with.
+  # Send messages to each other
+    # New db to store messages
   # Chat window
-    # On new user to talk to, add friend to list in chat window.
+    # On new user to talk to, add friend to list in chat window. (DONE)
     # add button to remove chat with specific person.
 
 #Missions Feature
-
-#Home page
-  #
 -->
 
 <div class="user-show">
@@ -57,13 +56,21 @@
   <main>
     <section class="main-content">
       <%= turbo_frame_tag "main" do %>
-        <ul class="main-content-nav">
-          <li class="main-content-active">Home</li>
-          <li><%= link_to 'Overview', user_overview_path(@user) %></li>
-          <li><a>Patch Notes</a></li>
-        </ul>
         <%= render "users/home" %>
       <% end %>
+      <aside class="minimize">
+        <ul>
+        </ul>
+        <section>
+          <h2>Das Kartoffel</h2>
+          <section class="chatbox">
+            Tryna run one?
+          </section>
+          <section class="new-message">
+            Setting up
+          </section> 
+        </section>
+      </aside>
     </section>
     <section class="friends">
       <ul class="friends-list">
@@ -77,21 +84,6 @@
         </li>
         <li>Missions</li>
       </ul>
-      <aside class="minimize">
-        <ul>
-          <li>Das Kartoffel</li>
-          <li>Uglymofo</li>
-        </ul>
-        <section>
-          <h2>Das Kartoffel</h2>
-          <section class="chatbox">
-            Tryna run one?
-          </section>
-          <section class="new-message">
-            Setting up
-          </section> 
-        </section>
-      </aside>
     </section>
   </main>
 </div>

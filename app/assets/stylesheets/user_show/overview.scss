@@ -1,0 +1,23 @@
+.overview {
+  display: flex;
+  align-items: flex-end;
+  height: 90%;
+  background-image: image-url('league_of_legends_preseason_2022.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overview > video, .overview > img {
+  width: 20%;
+  height: 20%;
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.overview > video:hover, .overview > img:hover {
+  cursor: pointer;
+}
+
+.overview > img {
+  width: 15%;
+}

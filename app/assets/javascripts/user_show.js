@@ -3,6 +3,7 @@ document.addEventListener('turbo:load', () => {
   const chatWindow = document.querySelector('aside');
   const friendsListLink = document.querySelectorAll('ul.friends-list li a');
   const chatWindowList = document.querySelector('aside ul');
+  const chatWindowHeader = document.querySelector('aside section h2');
   let addedToChatWindowList = false;
  
   window.chatWindowList = chatWindowList;
@@ -20,7 +21,7 @@ document.addEventListener('turbo:load', () => {
       // check if username is in the chat window list
         // if is, then continue with minimize/maximize.
         // else, add friend to chat window list.
-        
+
       // minimize/maximize the chat window
       if (chatWindowClasses.contains('minimize')) {
         chatWindowClasses.remove('minimize');
@@ -37,18 +38,25 @@ document.addEventListener('turbo:load', () => {
         };
       };
 
-      
       if (!addedToChatWindowList) {
         const newLi = document.createElement('li');
         newLi.textContent = node.textContent;
+        newLi.classList.add('highlight');
         chatWindowList.append(newLi);
       }
       
       addedToChatWindowList = false;
-     
-      // dehighlight/highlight the friend in the friends list.
-      const friendsLi = event.currentTarget.classList;
-      return friendsLi.contains('highlight') ? friendsLi.remove('highlight') : friendsLi.add('highlight');
+      chatWindowHeader.innerHTML = node.innerHTML;
     };
   });
+
+  chatWindowHeader.onclick = () => {
+    if (chatWindow.classList.contains('minimize')) {
+      chatWindow.classList.remove('minimize');
+      return chatWindow.classList.add('maximize');
+    } else {
+      chatWindow.classList.remove('maximize');
+      return chatWindow.classList.add('minimize');
+    };
+  };
 });
