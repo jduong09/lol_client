@@ -1,0 +1,7 @@
+<form action="<%= user_messages_url(user_id: user.id) %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <input type="hidden" name="message[receiver_name]" value="" /> 
+  <input type="text" name="message[body]" placeholder="New Message" />
+  
+  <input class="submit_btn" type="submit" value="SEND" />
+</form>

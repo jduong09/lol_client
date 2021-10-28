@@ -4,6 +4,7 @@ document.addEventListener('turbo:load', () => {
   const friendsListLink = document.querySelectorAll('ul.friends-list li a');
   const chatWindowList = document.querySelector('aside ul');
   const chatWindowHeader = document.querySelector('aside section h2');
+  const formSubmitBtn = document.querySelector('form input.submit_btn');
   let addedToChatWindowList = false;
  
   window.chatWindowList = chatWindowList;
@@ -18,10 +19,6 @@ document.addEventListener('turbo:load', () => {
   friendsListLink.forEach(node => {
     let chatWindowClasses = chatWindow.classList;
     node.onclick = () => {
-      // check if username is in the chat window list
-        // if is, then continue with minimize/maximize.
-        // else, add friend to chat window list.
-
       // minimize/maximize the chat window
       if (chatWindowClasses.contains('minimize')) {
         chatWindowClasses.remove('minimize');
@@ -31,6 +28,7 @@ document.addEventListener('turbo:load', () => {
         chatWindowClasses.add('minimize');
       }
 
+      // check if username is in the chat window list
       for (let i = 0; i < chatWindowList.children.length; i++) {
         if (chatWindowList.children[i].innerHTML === node.innerHTML) {
           addedToChatWindowList = true;
@@ -38,6 +36,7 @@ document.addEventListener('turbo:load', () => {
         };
       };
 
+      // add friend to chat window list.
       if (!addedToChatWindowList) {
         const newLi = document.createElement('li');
         newLi.textContent = node.textContent;
@@ -46,6 +45,7 @@ document.addEventListener('turbo:load', () => {
       }
       
       addedToChatWindowList = false;
+      // change the header to the friend that the user is talking to 
       chatWindowHeader.innerHTML = node.innerHTML;
     };
   });
@@ -59,4 +59,10 @@ document.addEventListener('turbo:load', () => {
       return chatWindow.classList.add('minimize');
     };
   };
+
+  formSubmitBtn.onclick = () => {
+    const receiverNameInput = document.getElementsByName("message[receiver_name]");
+    receiverNameInput[0].value = chatWindowHeader.innerHTML.toLowerCase();
+  };
+  
 });
