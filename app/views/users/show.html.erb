@@ -64,7 +64,8 @@
         <section>
           <h2>Das Kartoffel</h2>
           <section class="chatbox">
-            Tryna run one?
+            <turbo-frame id="chatbox" src="/users/<%= @user.id %>/messages">
+            </turbo-frame>
           </section>
           <section class="new-message">
             <%= render "messages/new", user:@user %>

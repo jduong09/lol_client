@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   #sign up & show
   resources :users, only: [:new, :create, :show] do 
     resource :overview, only: [:show]
-    resource :messages, only: [:create, :index]
+    resources :messages, only: [:create, :index]
   end
 
   #sign in & sign out
