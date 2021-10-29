@@ -15,10 +15,8 @@ class MessagesController < ApplicationController
 
     if @message.save
       respond_to do |format|
-        format.turbo_stream do
-          render turbo_stream: turbo_stream.append(:message, partial: "messages/message",
-            locals: { message: @message })
-        end
+        format.turbo_stream { render turbo_stream: turbo_stream.append(:messages, partial: "messages/message", locals: { message: @message })}
+        format.html { redirect_to user_messages_url(params[:user_id]) }
       end
     else
       render @message.errors.full_messages
