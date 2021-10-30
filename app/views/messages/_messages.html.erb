@@ -1,6 +1,6 @@
+<ul id="messages" >
 <% if messages.length == 0 %>
 <% else %>
-  <ul id="messages">
   <% messages.each do |message| %>
     <% if message.sender_id == current_user.id %>
       <li class="user_message"><%= message.body %></li>
@@ -8,5 +8,5 @@
       <li class="friend_message"><%= message.body %></li>
     <% end %>
   <% end %>
-  </ul>
 <% end %>
+</ul>
