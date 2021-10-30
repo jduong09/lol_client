@@ -1,6 +1,7 @@
-<turbo-frame id="chatbox">
+<% if messages.length == 0 %>
+<% else %>
   <ul id="messages">
-  <% @messages.each do |message| %>
+  <% messages.each do |message| %>
     <% if message.sender_id == current_user.id %>
       <li class="user_message"><%= message.body %></li>
     <% else %>
@@ -8,4 +9,4 @@
     <% end %>
   <% end %>
   </ul>
-</turbo-frame>
+<% end %>

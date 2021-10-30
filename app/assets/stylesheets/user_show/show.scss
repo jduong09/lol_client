@@ -178,3 +178,18 @@ aside .new-message {
   background-color: black;
   color: white;
 }
+
+#messages > li {
+  display: block;
+  background-color: blue;
+}
+
+.user_message {
+  text-align: end;
+}
+
+.friend_message {
+  text-align: start;
+}
+
+

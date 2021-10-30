@@ -65,6 +65,7 @@
           <h2>Das Kartoffel</h2>
           <section class="chatbox">
             <turbo-frame id="chatbox" src="/users/<%= @user.id %>/messages">
+              <ul id="messages"></ul>
             </turbo-frame>
           </section>
           <section class="new-message">
@@ -76,7 +77,7 @@
     <section class="friends">
       <ul class="friends-list">
       <% @friends.each do |friend| %> 
-        <li><a><%= friend.username.capitalize() %></a></li>
+        <li><a href="/users/<%= @user.id %>/messages/?friend_id=<%= friend.id %>"><%= friend.username.capitalize() %></a></li>
       <% end %>
       </ul>
 

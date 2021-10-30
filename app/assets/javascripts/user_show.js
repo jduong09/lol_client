@@ -48,6 +48,7 @@ document.addEventListener('turbo:load', () => {
       // change the header to the friend that the user is talking to 
       chatWindowHeader.innerHTML = node.innerHTML;
       // request messages between user and friend?
+      // need to pass friend_id to /user/:user_id/messages
     };
   });
 
