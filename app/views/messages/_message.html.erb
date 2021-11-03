@@ -1,5 +1,5 @@
 <% if message.sender_id == current_user.id %>
-  <li class="user_message"><%= message.body %></li>
+  <li class="user_message"><span><%= message.body %><span></li>
 <% else %>
-  <li class="friend_message"><%= message.body %><li>
+  <li class="friend_message"><span><%= message.body %><span><li>
 <% end %>

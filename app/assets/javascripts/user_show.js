@@ -66,5 +66,4 @@ document.addEventListener('turbo:load', () => {
     const receiverNameInput = document.getElementsByName("message[receiver_name]");
     receiverNameInput[0].value = chatWindowHeader.innerHTML.toLowerCase();
   };
-  
 });

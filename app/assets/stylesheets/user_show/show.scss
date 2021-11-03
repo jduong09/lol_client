@@ -181,15 +181,22 @@ aside .new-message {
 
 #messages > li {
   display: block;
-  background-color: blue;
+  padding: 2px;
 }
 
 .user_message {
   text-align: end;
+  padding: 2px;
 }
 
 .friend_message {
   text-align: start;
+}
+
+.user_message > span, .friend_message > span {
+  border: 1px solid goldenrod;
+  background-color: goldenrod;
+  border-radius: 2px 4px;
 }
 
 
